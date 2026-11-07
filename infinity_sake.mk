@@ -13,7 +13,6 @@ $(call inherit-product, device/asus/sake/device.mk)
 
 # Project Infinity X flags (must be set before inheriting vendor/infinity)
 INFINITY_MAINTAINER := James
-WITH_GAPPS := false
 TARGET_HAS_UDFPS := true
 
 # Inherit from the Project Infinity X configuration.
