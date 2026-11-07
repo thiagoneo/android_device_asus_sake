@@ -31,6 +31,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.infinity.soc=Snapdragon 888 \
     ro.infinity.camera=64MP + 12MP
 
+# Optional low-memory build host configuration
+ifeq ($(SAKE_LOWMEM_BUILD),true)
+include device/asus/sake/lowmem.mk
+endif
+
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
 PRODUCT_SYSTEM_DEVICE := ASUS_I006D
