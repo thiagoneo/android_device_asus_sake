@@ -11,14 +11,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from the device configuration.
 $(call inherit-product, device/asus/sake/device.mk)
 
-# Inherit from the Lineage configuration.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Project Infinity X flags (must be set before inheriting vendor/infinity)
+INFINITY_MAINTAINER := James
+WITH_GAPPS := false
+TARGET_HAS_UDFPS := true
+
+# Inherit from the Project Infinity X configuration.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := sake
 PRODUCT_MANUFACTURER := asus
 PRODUCT_MODEL := ASUS_I006D
-PRODUCT_NAME := lineage_sake
+PRODUCT_NAME := infinity_sake
+
+# Project Infinity X "About phone" info
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.product.marketname=Zenfone 8 \
+    ro.infinity.soc=Snapdragon 888 \
+    ro.infinity.camera=64MP + 12MP
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 

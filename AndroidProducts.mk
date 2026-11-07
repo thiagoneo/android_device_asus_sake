@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_sake.mk
+    $(LOCAL_DIR)/infinity_sake.mk
